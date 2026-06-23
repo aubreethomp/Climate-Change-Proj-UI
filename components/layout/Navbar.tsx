@@ -9,7 +9,7 @@ const NAV_LINKS = [
   { href: '/explorer',  label: 'Tipping Point Explorer',  icon: Clock10     },
   { href: '/simulator', label: 'Domino Effect Simulator', icon: RefreshCw },
   { href: '/lab',       label: 'Media Literacy', icon: BookOpen     },
-  { href: '/evidence',  label: 'Evidence',  icon: CloudFog     },
+  { href: '/evidence',  label: 'Evidence Dashboard',  icon: CloudFog     },
 ]
 
 export function Navbar() {
@@ -21,7 +21,7 @@ export function Navbar() {
 
         <Link href="/" className="flex items-center gap-1 flex-shrink-0">
           <span className="font-display text-[1.2rem] font-semibold tracking-wide text-terra">
-            Unaccepting of a Degrading Earth
+            The Threshold: Cause, Effects, and Relationships of Climate Tipping Points
           </span>
         </Link>
 
