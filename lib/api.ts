@@ -9,9 +9,6 @@ import type {
 
 const API_URL = process.env.REACT_APP_API_URL
 
-fetch(`${API_URL}/api/tipping-points/`)
-axios.get(`${API_URL}/api/simulator/`)
-
 async function apiFetch<T>(
   path: string,
   options: RequestInit & { next?: { revalidate?: number; tags?: string[] } } = {},
