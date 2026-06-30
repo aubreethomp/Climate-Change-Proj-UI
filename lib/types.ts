@@ -11,7 +11,6 @@ export interface TippingPointCard {
   domain: import('./tokens').Domain
   domain_raw: string
   scale: string
-  icon_emoji: string
   icon_label: string
   severity: import('./tokens').Severity
   near_term_status: string
@@ -72,7 +71,6 @@ export interface GraphNode {
   slug: string
   name: string
   domain: import('./tokens').Domain
-  icon_emoji: string
   severity: import('./tokens').Severity
 }
 

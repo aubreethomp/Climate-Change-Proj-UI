@@ -7,13 +7,16 @@ import type {
   PaginatedResponse,
 } from './types'
 
-const API_BASE = process.env.NEXT_PUBLIC_API_URL ?? 'http://localhost:8000'
+const API_URL = process.env.REACT_APP_API_URL
+
+fetch(`${API_URL}/api/tipping-points/`)
+axios.get(`${API_URL}/api/simulator/`)
 
 async function apiFetch<T>(
   path: string,
   options: RequestInit & { next?: { revalidate?: number; tags?: string[] } } = {},
 ): Promise<T> {
-  const url = `${API_BASE}${path}`
+  const url = `${API_URL}${path}`
   const res = await fetch(url, {
     headers: { 'Content-Type': 'application/json' },
     ...options,
@@ -82,7 +85,6 @@ export interface SimulationInput {
 export interface ActivatedNode {
   slug:             string
   name:             string
-  icon_emoji:       string
   domain:           string
   activation_score: number
   triggered_by:     string[]
