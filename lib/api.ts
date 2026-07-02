@@ -7,9 +7,9 @@ import type {
   PaginatedResponse,
 } from './types'
 
-const API_BASE = 'https://climate-change-service-production.up.railway.app' 
-  //process.env.API_URL ??
-  //process.env.NEXT_PUBLIC_API_URL ??
+const API_BASE = 
+  process.env.API_URL ??
+  process.env.NEXT_PUBLIC_API_URL ??
   'http://localhost:8000'
 
 async function apiFetch<T>(
