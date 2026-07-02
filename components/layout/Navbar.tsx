@@ -17,9 +17,9 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-divider">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-4 min-h-[5.5rem] flex flex-wrap items-center justify-between gap-4">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-4 min-h-[5.5rem] flex items-center justify-between gap-4">
 
-        <Link href="/" className="flex flex-col items-start gap-0.5 flex-shrink-0 min-w-0">
+        <Link href="/" className="flex min-w-0 flex-1 flex-col items-start gap-0.5">
           <span className="font-display text-[1.05rem] sm:text-[1.2rem] font-semibold tracking-wide text-terra leading-tight">
             The Threshold
           </span>
@@ -28,7 +28,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div className="flex items-center gap-1 flex-wrap">
+        <div className="flex items-center gap-1 flex-wrap justify-end">
           {NAV_LINKS.map(({ href, label, icon: Icon }) => {
             const active = pathname.startsWith(href)
             return (
