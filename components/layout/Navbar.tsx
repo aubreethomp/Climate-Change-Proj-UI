@@ -17,9 +17,9 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-divider">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-4 min-h-[5.5rem] flex items-center justify-between gap-4">
+      <nav className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 min-h-[5.5rem]">
 
-        <Link href="/" className="flex min-w-0 flex-1 flex-col items-start gap-0.5">
+        <Link href="/" className="relative z-10 flex min-w-0 w-[14rem] sm:w-[18rem] lg:w-[22rem] flex-shrink-0 flex-col items-start gap-0.5 pr-6">
           <span className="font-display text-[1.05rem] sm:text-[1.2rem] font-semibold tracking-wide text-terra leading-tight">
             The Threshold
           </span>
@@ -28,7 +28,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div className="flex items-center gap-1 flex-wrap justify-end ml-4 sm:ml-6">
+        <div className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center justify-end gap-1 flex-wrap sm:right-6 lg:right-8">
           {NAV_LINKS.map(({ href, label, icon: Icon }) => {
             const active = pathname.startsWith(href)
             return (
@@ -36,13 +36,13 @@ export function Navbar() {
                 key={href}
                 href={href}
                 className={clsx(
-                  'flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium font-ui transition-colors whitespace-nowrap',
+                  'flex items-center gap-1 px-2 py-1 rounded-md text-[0.65rem] sm:text-[0.75rem] font-medium font-ui transition-colors whitespace-nowrap',
                   active
                     ? 'bg-card text-olive border border-border'
                     : 'text-subtle hover:text-text hover:bg-card',
                 )}
               >
-                <Icon size={20} />
+                <Icon size={16} />
                 <span className="hidden sm:inline">{label}</span>
               </Link>
             )
