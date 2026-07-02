@@ -10,6 +10,8 @@ import { DomainBadge } from '@/components/ui/DomainBadge'
 import { DominoChain } from '@/components/explorer/DominoChain'
 import { RelationshipPanel } from '@/components/explorer/RelationshipPanel'
 
+export const dynamic = 'force-dynamic'
+
 export async function generateStaticParams() {
   try {
     const slugs = await getAllTippingPointSlugs()

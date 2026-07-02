@@ -3,6 +3,8 @@ import { getTippingPoints } from '@/lib/api'
 import { ExplorerGrid } from '@/components/explorer/ExplorerGrid'
 import { Activity } from 'lucide-react'
 
+export const dynamic = 'force-dynamic' 
+
 export const metadata: Metadata = {
   title: 'Tipping Point Explorer',
   description: 'Browse and filter 19 climate tipping points by domain, severity, and near-term risk.',

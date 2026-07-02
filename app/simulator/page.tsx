@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import { getScenarios, SimulationScenario } from '@/lib/api'
 import { SimulatorClient } from '@/components/simulator/SimulatorClient'
 
+export const dynamic = 'force-dynamic' 
+
 export const metadata: Metadata = {
   title: 'Domino Simulator',
   description: 'Adjust conditions and watch climate tipping points cascade in real time.',
