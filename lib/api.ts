@@ -7,13 +7,16 @@ import type {
   PaginatedResponse,
 } from './types'
 
-const API_URL = process.env.REACT_APP_API_URL
+const API_BASE =
+  process.env.API_URL ??
+  process.env.NEXT_PUBLIC_API_URL ??
+  'http://localhost:8000'
 
 async function apiFetch<T>(
   path: string,
   options: RequestInit & { next?: { revalidate?: number; tags?: string[] } } = {},
 ): Promise<T> {
-  const url = `${API_URL}${path}`
+  const url = `${API_BASE}${path}`
   const res = await fetch(url, {
     headers: { 'Content-Type': 'application/json' },
     ...options,
@@ -22,7 +25,7 @@ async function apiFetch<T>(
   return res.json() as Promise<T>
 }
 
-// Tipping Points 
+// Tipping Points
 export async function getTippingPoints(params?: {
   domain?: string
   severity?: string
@@ -53,7 +56,7 @@ export async function getAllTippingPointSlugs(): Promise<string[]> {
   return data.results.map(tp => tp.slug)
 }
 
-// Simulator 
+// Simulator
 export interface SimulationScenario {
   id: number
   slug: string
