@@ -17,15 +17,18 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-divider">
-      <nav className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between gap-6">
+      <nav className="max-w-7xl mx-auto px-4 sm:px-6 py-4 min-h-[5.5rem] flex flex-wrap items-center justify-between gap-4">
 
-        <Link href="/" className="flex items-center gap-1 flex-shrink-0">
-          <span className="font-display text-[1.2rem] font-semibold tracking-wide text-terra">
-            The Threshold: Cause, Effects, and Relationships of Climate Tipping Points
+        <Link href="/" className="flex flex-col items-start gap-0.5 flex-shrink-0 min-w-0">
+          <span className="font-display text-[1.05rem] sm:text-[1.2rem] font-semibold tracking-wide text-terra leading-tight">
+            The Threshold
+          </span>
+          <span className="text-[0.72rem] sm:text-[0.8rem] font-ui font-medium uppercase tracking-[0.2em] text-subtle/90 leading-tight">
+            Cause, Effects, and Relationships of Climate Tipping Points
           </span>
         </Link>
 
-        <div className="flex items-center gap-1">
+        <div className="flex items-center gap-1 flex-wrap">
           {NAV_LINKS.map(({ href, label, icon: Icon }) => {
             const active = pathname.startsWith(href)
             return (
@@ -39,7 +42,7 @@ export function Navbar() {
                     : 'text-subtle hover:text-text hover:bg-card',
                 )}
               >
-                <Icon size={25} />
+                <Icon size={20} />
                 <span className="hidden sm:inline">{label}</span>
               </Link>
             )
