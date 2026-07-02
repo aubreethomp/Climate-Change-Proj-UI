@@ -28,7 +28,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <div className="flex items-center gap-1 flex-wrap justify-end">
+        <div className="flex items-center gap-1 flex-wrap justify-end ml-4 sm:ml-6">
           {NAV_LINKS.map(({ href, label, icon: Icon }) => {
             const active = pathname.startsWith(href)
             return (
