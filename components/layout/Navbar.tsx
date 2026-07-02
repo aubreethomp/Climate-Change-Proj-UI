@@ -33,13 +33,13 @@ export function Navbar() {
                 key={href}
                 href={href}
                 className={clsx(
-                  'flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium font-ui transition-colors',
+                  'flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium font-ui transition-colors whitespace-nowrap',
                   active
                     ? 'bg-card text-olive border border-border'
                     : 'text-subtle hover:text-text hover:bg-card',
                 )}
               >
-                <Icon size={15} />
+                <Icon size={25} />
                 <span className="hidden sm:inline">{label}</span>
               </Link>
             )
