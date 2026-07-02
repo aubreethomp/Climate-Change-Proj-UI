@@ -300,12 +300,6 @@ export function SliderPanel({
       >
         {loading ? 'Running simulation…' : 'Run Simulation'}
       </button>
-
-      {/* Disclaimer */}
-      <p className="font-body text-text text-xs text-center leading-relaxed">
-        This is an educational simulation, not a predictive climate model.
-        Results illustrate cascading relationships, not forecasts.
-      </p>
     </div>
   )
 }
