@@ -1,8 +1,27 @@
 import type { Metadata } from 'next'
+import localFont from 'next/font/local'
 import './globals.css'
 import { Navbar } from '@/components/layout/Navbar'
 import { ThemedBackground } from '@/components/background/ThemedBackground'
 import { getThemeForDomain } from '@/lib/tokens'
+
+const woodenLog = localFont({
+  src: '../public/fonts/WoodenLog.ttf',
+  variable: '--font-wooden-log',
+  display: 'swap',
+})
+
+const safetyMedium = localFont({
+  src: '../public/fonts/SafetyMedium.otf',
+  variable: '--font-safety-medium',
+  display: 'swap',
+})
+
+const bonnyMedium = localFont({
+  src: '../public/fonts/BonnyMedium.woff2',
+  variable: '--font-bonny-medium',
+  display: 'swap',
+})
 
 export const metadata: Metadata = {
   title: {
@@ -16,7 +35,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${woodenLog.variable} ${safetyMedium.variable} ${bonnyMedium.variable}`}>
       <body className="bg-background text-text font-body min-h-screen">
         {/* Fixed animated background — vines by default; detail pages override */}
         <ThemedBackground />

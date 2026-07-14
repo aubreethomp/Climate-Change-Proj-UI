@@ -32,10 +32,10 @@ module.exports = {
         sage:        '#A8C5A0',
       },
       fontFamily: {
-        display: ['Playfair Display', 'Georgia', 'serif'],       // wordmark only
-        heading: ['Lora', 'Georgia', 'serif'],                   // h1, h2, page titles
-        body:    ['Inter', 'system-ui', 'sans-serif'],           // paragraphs
-        ui:      ['Space Grotesk', 'system-ui', 'sans-serif'],   // badges, pills, labels
+        display: ['var(--font-wooden-log)', 'Georgia', 'serif'],
+        body: ['var(--font-bonny-medium)', 'Georgia', 'serif'],
+        heading: ['var(--font-safety-medium)', 'system-ui', 'sans-serif'],
+        ui: ['var(--font-bonny-medium)', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         card: '10px',

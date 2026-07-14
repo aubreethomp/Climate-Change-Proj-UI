@@ -42,10 +42,10 @@ export const PALETTE = {
 // Typography 
 // Mirror of tailwind.config.js fontFamily (update both together)
 export const FONTS = {
-  wordmark: "'Playfair Display', Georgia, serif",  // logo/wordmark only
-  heading:  "'Lora', Georgia, serif",               // h1, h2, page titles
-  body:     "'Inter', system-ui, sans-serif",       // paragraphs
-  ui:       "'Space Grotesk', system-ui, sans-serif", // badges, pills, labels
+  wordmark: "'WoodenLog', 'Georgia', 'serif'",  // logo/wordmark only
+  heading:  "'SafetyMedium', 'system-ui', 'sans-serif'",  // h1, h2, page titles
+  body:     "'Bonny-Medium', 'Georgia', 'serif'",       // paragraphs
+  ui:       "'Bonny-Medium', 'system-ui', 'sans-serif'", // badges, pills, labels
 } as const
 
 // Severity configuration
