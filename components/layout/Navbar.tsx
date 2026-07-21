@@ -19,11 +19,11 @@ export function Navbar() {
     <header className="sticky top-0 z-50 bg-surface/95 backdrop-blur-md border-b border-divider">
       <nav className="relative w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 min-h-[5.5rem]">
 
-        <Link href="/" className="relative z-10 flex min-w-0 w-[14rem] sm:w-[18rem] lg:w-[22rem] flex-shrink-0 flex-col items-start gap-0.5 pr-6">
-          <span className="font-display text-[1.05rem] sm:text-[1.2rem] font-semibold tracking-wide text-terra leading-tight">
+        <Link href="/" className="relative z-10 flex min-w-0 w-[14rem] sm:w-[18rem] lg:w-[22rem] flex-shrink-0 flex-col items-start gap-0.1 pr-6 pt-5">
+          <span className="font-display text-[1.5rem] sm:text-[1.9rem] font-semibold tracking-wide text-text leading-tight">
             The Threshold
           </span>
-          <span className="text-[0.72rem] sm:text-[0.8rem] font-ui font-medium uppercase tracking-[0.2em] text-subtle/90 leading-tight">
+          <span className="text-[0.45rem] sm:text-[0.50rem] font-ui font-medium uppercase tracking-[0.1em] text-subtle/90 leading-tight">
             Cause, Effects, and Relationships of Climate Tipping Points
           </span>
         </Link>
@@ -36,7 +36,7 @@ export function Navbar() {
                 key={href}
                 href={href}
                 className={clsx(
-                  'flex items-center gap-1 px-2 py-1 rounded-md text-[0.65rem] sm:text-[0.75rem] font-medium font-ui transition-colors whitespace-nowrap',
+                  'flex items-center gap-1 px-2 py-1 rounded-md text-[0.6rem] sm:text-[0.60rem] font-medium font-ui transition-colors whitespace-nowrap',
                   active
                     ? 'bg-card text-olive border border-border'
                     : 'text-subtle hover:text-text hover:bg-card',

@@ -27,6 +27,7 @@ module.exports = {
         olive:       '#8B8E25',
         peach:       '#F2C4A8',
         rose:        '#E8A4A4',
+        navy:        '#344955',
         terra:       '#D84F23',
         terraLight:  '#F2C4B0',
         sage:        '#A8C5A0',
@@ -34,8 +35,8 @@ module.exports = {
       fontFamily: {
         display: ['var(--font-wooden-log)', 'Georgia', 'serif'],
         body: ['var(--font-bonny-medium)', 'Georgia', 'serif'],
-        heading: ['var(--font-safety-medium)', 'system-ui', 'sans-serif'],
-        ui: ['var(--font-bonny-medium)', 'system-ui', 'sans-serif'],
+        heading: ['var(--font-circus)', 'system-ui', 'sans-serif'],
+        ui: ['var(--font-fette)', 'system-ui', 'sans-serif'],
       },
       borderRadius: {
         card: '10px',

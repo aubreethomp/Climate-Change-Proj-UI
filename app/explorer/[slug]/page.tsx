@@ -5,7 +5,7 @@ import { ArrowLeft, AlertTriangle, Zap, GitMerge, BookOpen, ExternalLink, Info }
 import { getTippingPointBySlug, getAllTippingPointSlugs } from '@/lib/api'
 import { getSeverityConfig, getDomainConfig, getThemeForDomain } from '@/lib/tokens'
 import { parseSourceUrls } from '@/lib/utils'
-import { SeverityBadge } from '@/components/ui/SeverityBadge'
+import { SeverityThermometer } from '@/components/ui/SeverityThermometer'
 import { DomainBadge } from '@/components/ui/DomainBadge'
 import { DominoChain } from '@/components/explorer/DominoChain'
 import { RelationshipPanel } from '@/components/explorer/RelationshipPanel'
@@ -40,13 +40,14 @@ function Section({
   icon: React.ElementType
   title: string
   children: React.ReactNode
-  accent?: 'olive' | 'terra' | 'peach' | 'sage'
+  accent?: 'olive' | 'terra' | 'peach' | 'sage' | 'navy'
 }) {
   const accentClass: Record<string, string> = {
     olive: 'text-olive',
     terra: 'text-terra',
     peach: 'text-[#D4845A]',
     sage:  'text-[#4A7A42]',
+    navy:  'text-navy',
   }
   return (
     <section className="mb-8">
@@ -59,7 +60,7 @@ function Section({
   )
 }
 
-// Prose block 
+// Prose block
 function ProseBlock({ text }: { text: string }) {
   const parts = text.split(';').map(s => s.trim()).filter(Boolean)
   if (parts.length <= 1) {
@@ -69,7 +70,7 @@ function ProseBlock({ text }: { text: string }) {
     <ul className="space-y-1.5">
       {parts.map((part, i) => (
         <li key={i} className="flex items-start gap-2 text-sm text-subtle font-body">
-          <span className="text-olive mt-1 flex-shrink-0" aria-hidden="true">·</span>
+          <span className="text-navy mt-1 flex-shrink-0" aria-hidden="true">·</span>
           <span className="leading-relaxed">{part}</span>
         </li>
       ))}
@@ -123,7 +124,7 @@ export default async function TippingPointDetailPage({ params }: { params: { slu
               <div className="relative pl-3">
                 <div className="flex items-center gap-3 mb-4">
                   <DomainBadge domain={tp.domain} domainRaw={tp.domain_raw} />
-                  <SeverityBadge severity={tp.severity} />
+                  <SeverityThermometer severity={tp.severity} />
                 </div>
 
                 {/* heading*/}

@@ -31,6 +31,7 @@ export const PALETTE = {
   terra:       '#D84F23',   // terracotta (action / extreme severity)
   terraLight:  '#F2C4B0',   // light terracotta tint
   sage:        '#A8C5A0',   // soft sage green
+  navy:        '#344955',   // deep navy blue
   // Severity scale
   severityExtreme: '#D84F23',   // terracotta
   severityHigh:    '#D4845A',   // warm orange-brown

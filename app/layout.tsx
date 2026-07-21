@@ -11,6 +11,18 @@ const woodenLog = localFont({
   display: 'swap',
 })
 
+const circus = localFont({
+  src: '../public/fonts/Circus.ttf',
+  variable: '--font-circus',
+  display: 'swap',
+})
+
+const fette = localFont({
+  src: '../public/fonts/Fette.ttf',
+  variable: '--font-fette',
+  display: 'swap',
+})
+
 const safetyMedium = localFont({
   src: '../public/fonts/SafetyMedium.otf',
   variable: '--font-safety-medium',
@@ -35,7 +47,7 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${woodenLog.variable} ${safetyMedium.variable} ${bonnyMedium.variable}`}>
+    <html lang="en" className={`${woodenLog.variable} ${circus.variable} ${fette.variable} ${safetyMedium.variable} ${bonnyMedium.variable}`}>
       <body className="bg-background text-text font-body min-h-screen">
         {/* Fixed animated background — vines by default; detail pages override */}
         <ThemedBackground />

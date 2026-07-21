@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { TippingPointCard } from '@/lib/types'
 import { getSeverityConfig, getDomainConfig } from '@/lib/tokens'
-import { SeverityBadge } from '@/components/ui/SeverityBadge'
+import { SeverityThermometer } from '@/components/ui/SeverityThermometer'
 import { truncate } from '@/lib/utils'
 import { ChevronRight } from 'lucide-react'
 
@@ -35,7 +35,7 @@ export function TippingPointCard({ tp, style }: Props) {
           <span className="text-xs text-muted font-ui uppercase tracking-wide">
             {domainConfig.label}
           </span>
-          <SeverityBadge severity={tp.severity} />
+          <SeverityThermometer severity={tp.severity} />
         </div>
 
         {/* Card title — Lora */}

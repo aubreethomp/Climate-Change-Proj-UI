@@ -19,14 +19,14 @@ export default async function ExplorerPage() {
 
       {/* Page header */}
       <div className="mb-10">
-        <div className="flex items-center gap-2 text-olive text-sm font-ui mb-3">
+        <div className="flex items-center gap-2 text-text text-sm font-ui mb-3">
           <Activity size={14} />
           <span>Tipping Point Explorer</span>
         </div>
 
         {/* Page title */}
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold tracking-tight mb-3">
-          <span className="text-terra">19 critical and dismissed tipping points are listed below.</span>{' '}
+          <span className="text-navy">19 critical and dismissed tipping points are listed below.</span>{' '}
           <span className="text-text">If we continue on our current path of ignorance and inaction, the effects could lead to an inhabitable Earth and mass extinction. </span>
         </h1>
 

@@ -128,7 +128,7 @@ export function SimulatorClient({ scenarios }: Props) {
       >
         {/* Left panel (sliders) */}
         <div className={activeTab === 'results' ? 'hidden lg:block' : ''}>
-          <p className="font-ui text-xs uppercase tracking-widest text-muted mb-3 hidden lg:block">
+          <p className="font-ui text-xs uppercase tracking-widest text-navy mb-3 hidden lg:block">
             Adjust conditions
           </p>
           <SliderPanel
