@@ -27,8 +27,9 @@ export function SeverityThermometer({ severity, className }: Props) {
 
   return (
     <span
-      className={clsx('inline-flex items-center gap-1.5', className)}
+      className={clsx('badge-button severity-button inline-flex items-center gap-1.5', className)}
       aria-label={`${config.label} severity`}
+      style={{ borderColor: config.barColor, backgroundColor: `${config.barColor}1A`, fontFamily: 'var(--font-safety-medium)' }}
     >
       <svg width="11" height="21" viewBox="0 0 11 21" aria-hidden="true">
         {/* Bulb outline + faint tinted fill */}
@@ -55,15 +56,7 @@ export function SeverityThermometer({ severity, className }: Props) {
         <line x1="8.3" y1="7.5"  x2="9.4" y2="7.5"  stroke={config.barColor} strokeWidth="0.7" strokeOpacity="0.55" />
         <line x1="8.3" y1="11.5" x2="9.4" y2="11.5" stroke={config.barColor} strokeWidth="0.7" strokeOpacity="0.55" />
       </svg>
-      <span
-        className="font-semibold uppercase"
-        style={{
-          color: config.barColor,
-          fontSize: '0.6875rem',
-          letterSpacing: '0.05em',
-          fontFamily: "'Space Grotesk', sans-serif",
-        }}
-      >
+      <span className="font-semibold uppercase" style={{ color: config.barColor, fontSize: '0.6875rem', letterSpacing: '0.05em' }}>
         {config.label}
       </span>
     </span>

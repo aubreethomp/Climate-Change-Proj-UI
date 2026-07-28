@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { getTippingPoints } from '@/lib/api'
 import { ExplorerGrid } from '@/components/explorer/ExplorerGrid'
-import { Activity } from 'lucide-react'
 
 export const dynamic = 'force-dynamic' 
 
@@ -20,8 +19,7 @@ export default async function ExplorerPage() {
       {/* Page header */}
       <div className="mb-10">
         <div className="flex items-center gap-2 text-text text-sm font-ui mb-3">
-          <Activity size={14} />
-          <span>Tipping Point Explorer</span>
+          <span className="text-sm">Tipping Point Explorer</span>
         </div>
 
         {/* Page title */}

@@ -2,14 +2,14 @@
 
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import { Clock10, RefreshCw, CloudFog, BookOpen } from 'lucide-react'
+// icons removed per request
 import clsx from 'clsx'
 
 const NAV_LINKS = [
-  { href: '/explorer',  label: 'Tipping Point Explorer',  icon: Clock10     },
-  { href: '/simulator', label: 'Domino Effect Simulator', icon: RefreshCw },
-  { href: '/lab',       label: 'Media Literacy', icon: BookOpen     },
-  { href: '/evidence',  label: 'Evidence Dashboard',  icon: CloudFog     },
+  { href: '/explorer',  label: 'Tipping Point Explorer'  },
+  { href: '/simulator', label: 'Domino Effect Simulator' },
+  { href: '/lab',       label: 'Media Literacy'           },
+  { href: '/evidence',  label: 'Evidence Dashboard'       },
 ]
 
 export function Navbar() {
@@ -29,20 +29,20 @@ export function Navbar() {
         </Link>
 
         <div className="absolute right-4 top-1/2 flex -translate-y-1/2 items-center justify-end gap-1 flex-wrap sm:right-6 lg:right-8">
-          {NAV_LINKS.map(({ href, label, icon: Icon }) => {
+          {NAV_LINKS.map(({ href, label }) => {
             const active = pathname.startsWith(href)
             return (
               <Link
                 key={href}
                 href={href}
                 className={clsx(
-                  'flex items-center gap-1 px-2 py-1 rounded-md text-[0.6rem] sm:text-[0.60rem] font-medium font-ui transition-colors whitespace-nowrap',
+                  'px-3 py-1 rounded-md text-[0.675rem] sm:text-[0.725rem] font-medium font-ui transition-colors whitespace-nowrap',
+                  'inline-block',
                   active
                     ? 'bg-card text-olive border border-border'
                     : 'text-subtle hover:text-text hover:bg-card',
                 )}
               >
-                <Icon size={16} />
                 <span className="hidden sm:inline">{label}</span>
               </Link>
             )

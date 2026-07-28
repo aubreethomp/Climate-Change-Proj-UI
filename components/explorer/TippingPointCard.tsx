@@ -2,8 +2,8 @@ import Link from 'next/link'
 import type { TippingPointCard } from '@/lib/types'
 import { getSeverityConfig, getDomainConfig } from '@/lib/tokens'
 import { SeverityThermometer } from '@/components/ui/SeverityThermometer'
+import { DomainBadge } from '@/components/ui/DomainBadge'
 import { truncate } from '@/lib/utils'
-import { ChevronRight } from 'lucide-react'
 
 interface Props {
   tp: TippingPointCard
@@ -32,9 +32,7 @@ export function TippingPointCard({ tp, style }: Props) {
 
         {/* Domain label + severity badge */}
         <div className="flex items-start justify-between gap-2 mb-3">
-          <span className="text-xs text-muted font-ui uppercase tracking-wide">
-            {domainConfig.label}
-          </span>
+          <DomainBadge domain={tp.domain} domainRaw={domainConfig.label} />
           <SeverityThermometer severity={tp.severity} />
         </div>
 
@@ -57,9 +55,8 @@ export function TippingPointCard({ tp, style }: Props) {
         </div>
 
         {/* Hover CTA */}
-        <div className="flex items-center gap-1 mt-3 text-xs text-muted group-hover:text-olive transition-colors">
-          <span className="font-ui">Explore domino chain</span>
-          <ChevronRight size={12} />
+        <div className="flex items-center gap-2 mt-3">
+          <span className="cta-button group-hover:text-olive">Explore domino chain</span>
         </div>
       </div>
     </Link>

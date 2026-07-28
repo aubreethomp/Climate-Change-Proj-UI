@@ -11,8 +11,12 @@ interface Props {
 export function DomainBadge({ domain, domainRaw, className }: Props) {
   const config = getDomainConfig(domain)
   return (
-    <span className={clsx('inline-flex items-center text-xs text-subtle font-ui', className)}>
+    <button
+      type="button"
+      className={clsx('badge-button domain-button', className)}
+      style={{ fontFamily: 'var(--font-safety-medium)' }}
+    >
       {domainRaw ?? config.label}
-    </span>
+    </button>
   )
 }

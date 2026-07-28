@@ -10,8 +10,12 @@ interface Props {
 export function SeverityBadge({ severity, className }: Props) {
   const config = getSeverityConfig(severity)
   return (
-    <span className={clsx('severity-badge', config.badgeClass, className)}>
+    <button
+      type="button"
+      className={clsx('badge-button severity-button severity-badge', config.badgeClass, className)}
+      style={{ fontFamily: 'var(--font-safety-medium)' }}
+    >
       {config.label}
-    </span>
+    </button>
   )
 }

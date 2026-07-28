@@ -51,5 +51,21 @@ export function ThemedBackground() {
     ? (SLUG_THEME_OVERRIDES[slug] ?? 'grass')
     : 'grass'
 
+  // Use a static photographic background for the explorer landing page
+  if (pathname === '/explorer') {
+    return (
+      <div
+        className="bg-scene"
+        aria-hidden="true"
+        style={{
+          backgroundImage: "url('/background.jpg')",
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat',
+        }}
+      />
+    )
+  }
+
   return <SceneBackground theme={theme} />
 }
