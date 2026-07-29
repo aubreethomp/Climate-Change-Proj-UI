@@ -14,16 +14,16 @@
 // Raw palette 
 export const PALETTE = {
   // Backgrounds
-  background:  '#FDF4F0',   // page background (cream with lightest pink blush)
+  background:  '#74512D',   // page background
   card:        '#FFFAF8',   // card surface (near white, warm)
-  surface:     '#FAF0EB',   // navbar / elevated surface
+  surface:     '#61481C',   // navbar / elevated surface
   // Borders & dividers
   border:      '#F2D9CF',   // card borders (soft peach)
-  divider:     '#EDD5C8',   // section dividers (pale peach)
+  divider:     '#453b1e',   // section dividers
   // Text
-  text:        '#3D2314',   // primary text (deep warm brown)
-  subtle:      '#8B6355',   // secondary text (mid warm brown)
-  muted:       '#C4A090',   // placeholder / disabled (light warm brown)
+  text:        '#1c0b02',   // primary text
+  subtle:      '#1f2a20',   // secondary text
+  muted:       '#8D0B41',   // placeholder / disabled
   // Accents (from reference images)
   olive:       '#8B8E25',   // primary nature accent (moss/olive green)
   peach:       '#F2C4A8',   // warm secondary accent
@@ -31,7 +31,7 @@ export const PALETTE = {
   terra:       '#D84F23',   // terracotta (action / extreme severity)
   terraLight:  '#F2C4B0',   // light terracotta tint
   sage:        '#A8C5A0',   // soft sage green
-  navy:        '#344955',   // deep navy blue
+  navy:        '#102E50',   // deep navy blue
   // Severity scale
   severityExtreme: '#D84F23',   // terracotta
   severityHigh:    '#D4845A',   // warm orange-brown
@@ -44,9 +44,9 @@ export const PALETTE = {
 // Mirror of tailwind.config.js fontFamily (update both together)
 export const FONTS = {
   wordmark: "'WoodenLog', 'Georgia', 'serif'",  // logo/wordmark only
-  heading:  "'SafetyMedium', 'system-ui', 'sans-serif'",  // h1, h2, page titles
-  body:     "'Bonny-Medium', 'Georgia', 'serif'",       // paragraphs
-  ui:       "'Bonny-Medium', 'system-ui', 'sans-serif'", // badges, pills, labels
+  heading:  "'Circus', 'system-ui', 'sans-serif'",  // h1, h2, page titles
+  body:     "'BonnyMedium', 'system-ui', 'sans-serif'",       // paragraphs
+  ui:       "'Fette', 'system-ui', 'sans-serif'", // badges, pills, labels
 } as const
 
 // Severity configuration

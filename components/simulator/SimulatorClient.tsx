@@ -161,7 +161,7 @@ export function SimulatorClient({ scenarios }: Props) {
                   border:      '1px solid #D84F23',
                   background:  'transparent',
                   color:       '#D84F23',
-                  fontFamily:  "'Space Grotesk', sans-serif",
+                  fontFamily:  "'SafetyMedium', sans-serif",
                   fontWeight:  600,
                   fontSize:    '0.875rem',
                   cursor:      'pointer',

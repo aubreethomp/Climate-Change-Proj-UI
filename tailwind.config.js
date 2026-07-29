@@ -17,12 +17,12 @@ module.exports = {
     extend: {
       colors: {
         background:  '#74512D',
-        card:        '#FFFAF8',
+        card:        '#D1C145',
         surface:     '#61481C',
         border:      '#F2D9CF',
         divider:     '#453b1e',
         text:        '#1c0b02',
-        subtle:      '#1f2a20',
+        subtle:      '#748e78',
         muted:       '#8D0B41',
         olive:       '#8B8E25',
         peach:       '#F2C4A8',

@@ -39,8 +39,8 @@ export function Navbar() {
                   'px-3 py-1 rounded-md text-[0.675rem] sm:text-[0.725rem] font-medium font-ui transition-colors whitespace-nowrap',
                   'inline-block',
                   active
-                    ? 'bg-card text-olive border border-border'
-                    : 'text-subtle hover:text-text hover:bg-card',
+                    ? 'bg-sage text-text border border-border'
+                    : 'text-subtle hover:text-navy hover:bg-sage',
                 )}
               >
                 <span className="hidden sm:inline">{label}</span>
