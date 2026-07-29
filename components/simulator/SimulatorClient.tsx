@@ -89,7 +89,7 @@ export function SimulatorClient({ scenarios }: Props) {
               border:      'none',
               background:  activeTab === tab ? '#D84F23' : 'transparent',
               color:       activeTab === tab ? '#FFFAF8' : '#8B6355',
-              fontFamily:  "'Space Grotesk', sans-serif",
+              fontFamily:  "'SafetyMedium', sans-serif",
               fontWeight:  600,
               fontSize:    '0.875rem',
               cursor:      'pointer',

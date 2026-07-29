@@ -29,7 +29,7 @@ export default async function SimulatorPage() {
         <h1 className="font-heading text-3xl sm:text-4xl font-semibold text-text mb-3">
           Climate Change Domino Simulator
         </h1>
-        <p className="font-body text-text text-base max-w-2xl leading-relaxed">
+        <p className="font-body text-peach text-base max-w-2xl leading-relaxed">
           Adjust the following six societal conditions: misinformation, trust, policy speed, emissions,
           and ecosystem resilience, to see which climate tipping points activate
           and cascade into each other. 
